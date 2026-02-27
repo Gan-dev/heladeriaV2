@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer class="bg-gray-950 text-gray-300">
       {/* Main grid */}
-      <div class="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
         {/* Brand */}
         <div class="lg:col-span-2">
           <h2

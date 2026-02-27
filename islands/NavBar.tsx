@@ -70,7 +70,7 @@ export default function NavBar() {
         {/* Logo */}
         <a
           href="/"
-          class="font-allura font-bold text-4xl leading-none select-none"
+          class="font-allura font-bold text-2xl sm:text-4xl leading-none select-none truncate max-w-[200px] sm:max-w-none"
         >
           Heladeria Roma
         </a>

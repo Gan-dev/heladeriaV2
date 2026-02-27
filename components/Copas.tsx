@@ -18,12 +18,12 @@ function MenuCard(
   const src = "./dist/img/" + folder + "/" + img + ".png";
   return (
     <article class="group flex flex-col items-center bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-      <div class="w-full bg-gray-50 flex items-center justify-center p-4 h-44">
+      <div class="w-full bg-gray-50 flex items-center justify-center p-3 sm:p-4 h-36 sm:h-44">
         <img
           src={src}
           alt={name}
           loading="lazy"
-          class="max-h-36 object-contain group-hover:scale-105 transition-transform duration-300"
+          class="max-h-28 sm:max-h-36 object-contain group-hover:scale-105 transition-transform duration-300"
         />
       </div>
       <div class="w-full px-3 py-3 text-center border-t border-gray-100">

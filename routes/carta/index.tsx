@@ -40,7 +40,7 @@ export default function Home(props: PageProps<{ ices: HeladosData }>) {
 
       <NavBar />
 
-      <main class="section-menu-card">
+      <main class="section-menu-card px-4 sm:px-6">
         {/* Quick-nav pills */}
         <div class="flex flex-wrap gap-3 justify-center py-6">
           <a
@@ -66,7 +66,7 @@ export default function Home(props: PageProps<{ ices: HeladosData }>) {
         {/* ── Copas ── */}
         <section class="section-anchor mb-12" id="copas">
           <div class="text-center mb-8">
-            <h2 class="text-3xl font-bold mb-1">Nuestras Copas</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold mb-1">Nuestras Copas</h2>
             <p class="text-gray-500 text-sm">
               Elaboradas artesanalmente cada día
             </p>
@@ -102,7 +102,9 @@ export default function Home(props: PageProps<{ ices: HeladosData }>) {
         {/* ── Helados con filtro ── */}
         <section class="section-anchor mb-12" id="icecream">
           <div class="text-center mb-8">
-            <h2 class="text-3xl font-bold mb-1">Nuestros Helados</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold mb-1">
+              Nuestros Helados
+            </h2>
             <p class="text-gray-500 text-sm">Filtra según tus necesidades</p>
             <div class="w-16 h-1 bg-gray-800 rounded mx-auto mt-3" />
           </div>
@@ -137,7 +139,7 @@ export default function Home(props: PageProps<{ ices: HeladosData }>) {
                     gi === 0 ? "sm:border-r border-orange-200" : ""
                   }`}
                 >
-                  <p class="text-orange-600 text-xs font-bold uppercase tracking-widest mb-3">
+                  <p class="text-orange-600 text-xs font-bold uppercase tracking-wide mb-3 leading-snug">
                     {grupo.title}
                   </p>
                   <ul class="space-y-2">
@@ -168,7 +170,9 @@ export default function Home(props: PageProps<{ ices: HeladosData }>) {
         {/* ── Granizados ── */}
         <section class="section-anchor mb-4" id="granizado">
           <div class="text-center mb-8">
-            <h2 class="text-3xl font-bold mb-1">Granizados & Horchata</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold mb-1">
+              Granizados & Horchata
+            </h2>
             <div class="w-16 h-1 bg-gray-800 rounded mx-auto mt-3" />
           </div>
           <Copas
