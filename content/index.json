@@ -80,7 +80,7 @@
       ]
     }
   ],
-  "ices":[
+  "ices": [
     {
       "name": "After Eight",
       "allergens": true,
@@ -279,7 +279,7 @@
       "Lacteos": true,
       "img": "fresa"
     },
-    { 
+    {
       "name": "Frutos del Bosque",
       "allergens": false,
       "frutosSecos": false,
@@ -539,6 +539,47 @@
       "Gluten": false,
       "Lacteos": false,
       "img": "zanahoriaMandarina"
+    }
+  ],
+  "granizados": [
+    { "name": "Horchata", "img": "horchataCarta", "price": "4.00€" },
+    { "name": "Café", "img": "granizadoCafe", "price": "3.90€" },
+    { "name": "Chicle", "img": "granizadoChicle", "price": "3.90€" },
+    { "name": "Cola", "img": "granizadoCola", "price": "3.90€" },
+    { "name": "Drácula", "img": "granizadoDracula", "price": "3.90€" },
+    { "name": "Energy", "img": "granizadoEnergy", "price": "3.90€" },
+    { "name": "Fresa", "img": "granizadoFresa", "price": "3.90€" },
+    { "name": "Fruta Pasión", "img": "granizadoFrutaPasion", "price": "3.90€" },
+    {
+      "name": "Frutas Bosque",
+      "img": "granizadoFrutasBosque",
+      "price": "3.90€"
+    },
+    { "name": "Limón", "img": "GranizadoLimon", "price": "3.90€" },
+    { "name": "Mango", "img": "granizadoMango", "price": "3.90€" },
+    { "name": "Manzana", "img": "granizadoManzana", "price": "3.90€" },
+    { "name": "Melón", "img": "granizadoMelon", "price": "3.90€" },
+    { "name": "Menta", "img": "granizadoMenta", "price": "3.90€" },
+    { "name": "Mojito", "img": "granizadoMojito", "price": "3.90€" },
+    { "name": "Naranja", "img": "granizadoNaranja", "price": "3.90€" },
+    { "name": "Piña", "img": "granizadoPiña", "price": "3.90€" },
+    { "name": "Piruleta", "img": "granizadoPiruleta", "price": "3.90€" },
+    { "name": "Plátano", "img": "granizadoPlatano", "price": "3.90€" },
+    { "name": "Sandía", "img": "granizadoSandia", "price": "3.90€" },
+    { "name": "Tropical", "img": "granizadoTropical", "price": "3.90€" }
+  ],
+  "tarrinas": [
+    {
+      "name": "Tarrina ½ Litro",
+      "img": "medioLitro",
+      "price": "8.70€",
+      "desc": "Hasta 3 sabores"
+    },
+    {
+      "name": "Tarrina 1 Litro",
+      "img": "unLitro",
+      "price": "17.50€",
+      "desc": "Hasta 3 sabores"
     }
   ]
 }
