@@ -1,3 +1,4 @@
+#!/usr/bin/env -S deno run -A --watch=static/,routes/
 /// <reference no-default-lib="true" />
 /// <reference lib="dom" />
 /// <reference lib="dom.iterable" />
@@ -9,5 +10,9 @@ import manifest from "./fresh.gen.ts";
 
 import twindPlugin from "$fresh/plugins/twind.ts";
 import twindConfig from "./twind.config.ts";
+
+import dev from "$fresh/dev.ts";
+
+await dev(import.meta.url, "./main.ts");
 
 await start(manifest, { plugins: [twindPlugin(twindConfig)] });
