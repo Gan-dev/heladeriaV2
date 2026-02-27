@@ -6,7 +6,6 @@ Thumbs.db
 
 # Temporary build scripts (auto-deleted, but just in case)
 _write*.ts
-_writeCopas.ts
 
-# Do NOT ignore _fresh — it must be committed for Deno Deploy islands to work
-# _fresh/
+# AOT build output — NOT committed, Deno Deploy builds JIT
+_fresh/
