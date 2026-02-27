@@ -34,6 +34,35 @@ export default function Home(props: PageProps<{ ices: HeladosData }>) {
           {`
           html { scroll-behavior: smooth; }
           .section-anchor { scroll-margin-top: 80px; }
+
+          @-webkit-keyframes slideUp {
+            from { -webkit-transform: translateY(100%); transform: translateY(100%); opacity: 0; }
+            to   { -webkit-transform: translateY(0);    transform: translateY(0);    opacity: 1; }
+          }
+          @keyframes slideUp {
+            from { transform: translateY(100%); opacity: 0; }
+            to   { transform: translateY(0);    opacity: 1; }
+          }
+          .animate-slideUp {
+            -webkit-animation: slideUp 0.28s cubic-bezier(0.32,0.72,0,1) both;
+                    animation: slideUp 0.28s cubic-bezier(0.32,0.72,0,1) both;
+            will-change: transform, opacity;
+          }
+          .modal-backdrop {
+            background: rgba(0,0,0,0.6);
+            -webkit-backdrop-filter: blur(4px);
+                    backdrop-filter: blur(4px);
+          }
+          .nav-blur {
+            -webkit-backdrop-filter: blur(12px) saturate(1.5);
+                    backdrop-filter: blur(12px) saturate(1.5);
+            background: rgba(255,255,255,0.92);
+          }
+          .nav-blur-light {
+            -webkit-backdrop-filter: blur(8px);
+                    backdrop-filter: blur(8px);
+            background: rgba(255,255,255,0.75);
+          }
         `}
         </style>
       </Head>

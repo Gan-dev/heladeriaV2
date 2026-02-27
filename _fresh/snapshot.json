@@ -1,8 +1,8 @@
 {
-  "build_id": "b7e8c44b4da7049be09682c723ff0035338565d5",
+  "build_id": "eedfb54aad9adfcb5681e4dddd00291eba31c2e5",
   "files": {
     "main.js": [
-      "chunk-XQ6C3UKH.js",
+      "chunk-IP6TLFLP.js",
       "chunk-D4CPDDRE.js",
       "chunk-ATX7TDFZ.js"
     ],
@@ -13,13 +13,13 @@
       "chunk-ATX7TDFZ.js"
     ],
     "island-counter.js": [
-      "chunk-XQ6C3UKH.js",
+      "chunk-IP6TLFLP.js",
       "chunk-D4CPDDRE.js",
       "chunk-RPWRD7AT.js",
       "chunk-IP6J3CWI.js",
       "chunk-ATX7TDFZ.js"
     ],
-    "chunk-XQ6C3UKH.js": [],
+    "chunk-IP6TLFLP.js": [],
     "chunk-D4CPDDRE.js": [],
     "island-filterice.js": [
       "chunk-RPWRD7AT.js",
