@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState, useEffect } from "preact/hooks";
+import { useEffect, useMemo, useRef, useState } from "preact/hooks";
 
 type Ice = {
   name: string;
@@ -33,24 +33,32 @@ const defaultFilters: FilterState = {
 type Allergen = { key: keyof Ice; label: string; img: string };
 
 const ALLERGENS: Allergen[] = [
-  { key: "Huevo",       label: "Huevo",        img: "./dist/img/allergens/Egg.svg" },
-  { key: "frutosSecos", label: "Frutos secos",  img: "./dist/img/allergens/nuts.svg" },
-  { key: "Gluten",      label: "Gluten",        img: "./dist/img/allergens/Gluten.svg" },
-  { key: "Lacteos",     label: "Lácteos",       img: "./dist/img/allergens/Lacteos.svg" },
+  { key: "Huevo", label: "Huevo", img: "./dist/img/allergens/Egg.svg" },
+  {
+    key: "frutosSecos",
+    label: "Frutos secos",
+    img: "./dist/img/allergens/nuts.svg",
+  },
+  { key: "Gluten", label: "Gluten", img: "./dist/img/allergens/Gluten.svg" },
+  { key: "Lacteos", label: "Lácteos", img: "./dist/img/allergens/Lacteos.svg" },
 ];
 
-const FILTER_CONFIG: Array<{ key: keyof FilterState; label: string; icon: string }> = [
-  { key: "allergens", label: "Sin alérgenos",    icon: "✓" },
-  { key: "lacteos",   label: "Sin lácteos",      icon: "🥛" },
-  { key: "egg",       label: "Sin huevo",        icon: "🥚" },
-  { key: "gluten",    label: "Sin gluten",       icon: "🌾" },
-  { key: "nuts",      label: "Sin frutos secos", icon: "🥜" },
+const FILTER_CONFIG: Array<
+  { key: keyof FilterState; label: string; icon: string }
+> = [
+  { key: "allergens", label: "Sin alérgenos", icon: "✓" },
+  { key: "lacteos", label: "Sin lácteos", icon: "🥛" },
+  { key: "egg", label: "Sin huevo", icon: "🥚" },
+  { key: "gluten", label: "Sin gluten", icon: "🌾" },
+  { key: "nuts", label: "Sin frutos secos", icon: "🥜" },
 ];
 
 // ── Modal de detalle ────────────────────────────────────────────────────────
 function IceModal({ ice, onClose }: { ice: Ice; onClose: () => void }) {
   useEffect(() => {
-    const handler = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
     globalThis.addEventListener("keydown", handler);
     document.body.style.overflow = "hidden";
     return () => {
@@ -63,11 +71,12 @@ function IceModal({ ice, onClose }: { ice: Ice; onClose: () => void }) {
 
   return (
     <div
-      class="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-sm sm:p-4"
+      class="modal-backdrop fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:p-4"
       onClick={onClose}
     >
       <div
         class="animate-slideUp relative w-full sm:max-w-sm bg-white sm:rounded-2xl rounded-t-3xl shadow-2xl overflow-hidden"
+        style="will-change: transform;"
         onClick={(e) => e.stopPropagation()}
       >
         <div class="sm:hidden flex justify-center pt-3 pb-1">
@@ -78,7 +87,9 @@ function IceModal({ ice, onClose }: { ice: Ice; onClose: () => void }) {
           onClick={onClose}
           class="absolute top-3 right-4 text-gray-400 hover:text-gray-700 text-2xl leading-none font-bold z-10"
           aria-label="Cerrar"
-        >×</button>
+        >
+          ×
+        </button>
 
         <div class="bg-gray-50 flex items-center justify-center h-52">
           <img
@@ -97,23 +108,34 @@ function IceModal({ ice, onClose }: { ice: Ice; onClose: () => void }) {
             </span>
           )}
 
-          {activeAllergens.length > 0 ? (
-            <div>
-              <p class="text-sm text-gray-500 font-medium mb-3">Contiene alérgenos:</p>
-              <div class="grid grid-cols-4 gap-3">
-                {activeAllergens.map((a) => (
-                  <div key={a.key as string} class="flex flex-col items-center gap-1.5">
-                    <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center border border-orange-100">
-                      <img src={a.img} alt={a.label} class="w-10 h-10" />
+          {activeAllergens.length > 0
+            ? (
+              <div>
+                <p class="text-sm text-gray-500 font-medium mb-3">
+                  Contiene alérgenos:
+                </p>
+                <div class="grid grid-cols-4 gap-3">
+                  {activeAllergens.map((a) => (
+                    <div
+                      key={a.key as string}
+                      class="flex flex-col items-center gap-1.5"
+                    >
+                      <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center border border-orange-100">
+                        <img src={a.img} alt={a.label} class="w-10 h-10" />
+                      </div>
+                      <span class="text-xs text-gray-600 text-center font-medium leading-tight">
+                        {a.label}
+                      </span>
                     </div>
-                    <span class="text-xs text-gray-600 text-center font-medium leading-tight">{a.label}</span>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
-          ) : (
-            <p class="text-sm text-gray-400">No contiene alérgenos declarados.</p>
-          )}
+            )
+            : (
+              <p class="text-sm text-gray-400">
+                No contiene alérgenos declarados.
+              </p>
+            )}
 
           <button
             type="button"
@@ -140,7 +162,9 @@ function IceCard({ item, onOpen }: { item: Ice; onOpen: (i: Ice) => void }) {
       onClick={() => onOpen(item)}
       role="button"
       tabIndex={0}
-      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onOpen(item); }}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") onOpen(item);
+      }}
       aria-label={"Ver detalle de " + item.name}
     >
       <div class="w-full bg-gray-50 flex items-center justify-center p-3 h-36 sm:h-44">
@@ -152,26 +176,34 @@ function IceCard({ item, onOpen }: { item: Ice; onOpen: (i: Ice) => void }) {
         />
       </div>
       <div class="w-full px-2 pt-2 pb-2 text-center border-t border-gray-100 flex-1 flex flex-col justify-between gap-1">
-        <p class="font-semibold text-gray-800 text-xs leading-tight">{item.name}</p>
+        <p class="font-semibold text-gray-800 text-xs leading-tight">
+          {item.name}
+        </p>
 
-        {activeAllergens.length > 0 ? (
-          <div class="flex justify-center gap-1.5 flex-wrap mt-1">
-            {activeAllergens.map((a) => (
-              <img
-                key={a.key as string}
-                src={a.img}
-                alt={a.label}
-                title={a.label}
-                class="w-6 h-6 sm:w-7 sm:h-7 opacity-80"
-                loading="lazy"
-              />
-            ))}
-          </div>
-        ) : (
-          <span class="text-xs text-green-600 font-semibold mt-0.5">Sin alérgenos ✓</span>
-        )}
+        {activeAllergens.length > 0
+          ? (
+            <div class="flex justify-center gap-1.5 flex-wrap mt-1">
+              {activeAllergens.map((a) => (
+                <img
+                  key={a.key as string}
+                  src={a.img}
+                  alt={a.label}
+                  title={a.label}
+                  class="w-6 h-6 sm:w-7 sm:h-7 opacity-80"
+                  loading="lazy"
+                />
+              ))}
+            </div>
+          )
+          : (
+            <span class="text-xs text-green-600 font-semibold mt-0.5">
+              Sin alérgenos ✓
+            </span>
+          )}
 
-        <p class="text-gray-300 text-[10px] mt-0.5 sm:hidden">Toca para ver más</p>
+        <p class="text-gray-300 text-[10px] mt-0.5 sm:hidden">
+          Toca para ver más
+        </p>
       </div>
     </article>
   );
@@ -201,13 +233,18 @@ export default function FilterIce(props: IcesProps) {
     setFilter((prev) => ({ ...prev, [id]: !prev[id] }));
 
   const anyActive = Object.values(filter).some(Boolean) || search.trim() !== "";
-  const resetAll = () => { setFilter(defaultFilters); setSearch(""); };
+  const resetAll = () => {
+    setFilter(defaultFilters);
+    setSearch("");
+  };
 
   return (
     <>
       {/* Buscador */}
       <div class="relative max-w-md mx-auto mb-4">
-        <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-lg pointer-events-none">🔍</span>
+        <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-lg pointer-events-none">
+          🔍
+        </span>
         <input
           ref={searchRef}
           type="search"
@@ -219,10 +256,15 @@ export default function FilterIce(props: IcesProps) {
         {search && (
           <button
             type="button"
-            onClick={() => { setSearch(""); searchRef.current?.focus(); }}
+            onClick={() => {
+              setSearch("");
+              searchRef.current?.focus();
+            }}
             class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-700 text-xl"
             aria-label="Limpiar búsqueda"
-          >×</button>
+          >
+            ×
+          </button>
         )}
       </div>
 
@@ -236,8 +278,14 @@ export default function FilterIce(props: IcesProps) {
                 ? "bg-gray-900 text-white border-gray-900 shadow-md"
                 : "bg-white text-gray-700 border-gray-300 hover:border-gray-500")}
           >
-            <input type="checkbox" class="hidden" checked={filter[item.key]} onChange={() => toggleFilter(item.key)} />
-            <span>{item.icon}</span>{item.label}
+            <input
+              type="checkbox"
+              class="hidden"
+              checked={filter[item.key]}
+              onChange={() => toggleFilter(item.key)}
+            />
+            <span>{item.icon}</span>
+            {item.label}
           </label>
         ))}
       </div>
@@ -246,8 +294,18 @@ export default function FilterIce(props: IcesProps) {
       <div class="flex items-center justify-center gap-3 my-4">
         <p class="text-sm font-semibold text-gray-600">
           {filteredIces.length === props.start.length
-            ? <span><b class="text-gray-900">{filteredIces.length}</b> helados disponibles</span>
-            : <span><b class="text-gray-900">{filteredIces.length}</b> de {props.start.length} helados</span>}
+            ? (
+              <span>
+                <b class="text-gray-900">{filteredIces.length}</b>{" "}
+                helados disponibles
+              </span>
+            )
+            : (
+              <span>
+                <b class="text-gray-900">{filteredIces.length}</b> de{" "}
+                {props.start.length} helados
+              </span>
+            )}
         </p>
         {anyActive && (
           <button
@@ -261,25 +319,38 @@ export default function FilterIce(props: IcesProps) {
       </div>
 
       {/* Grid */}
-      {filteredIces.length === 0 ? (
-        <div class="text-center py-16 text-gray-400">
-          <p class="text-5xl mb-4">🍦</p>
-          <p class="text-lg font-semibold text-gray-500">Ningún helado coincide</p>
-          <p class="text-sm mt-1">Prueba con otro término o cambia los filtros</p>
-          <button type="button" onClick={resetAll} class="mt-5 px-6 py-2.5 bg-gray-900 text-white rounded-full text-sm font-semibold hover:bg-gray-700 transition-colors">
-            Ver todos
-          </button>
-        </div>
-      ) : (
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4">
-          {filteredIces.map((item) => (
-            <IceCard key={item.name} item={item} onOpen={setSelected} />
-          ))}
-        </div>
-      )}
+      {filteredIces.length === 0
+        ? (
+          <div class="text-center py-16 text-gray-400">
+            <p class="text-5xl mb-4">🍦</p>
+            <p class="text-lg font-semibold text-gray-500">
+              Ningún helado coincide
+            </p>
+            <p class="text-sm mt-1">
+              Prueba con otro término o cambia los filtros
+            </p>
+            <button
+              type="button"
+              onClick={resetAll}
+              class="mt-5 px-6 py-2.5 bg-gray-900 text-white rounded-full text-sm font-semibold hover:bg-gray-700 transition-colors"
+            >
+              Ver todos
+            </button>
+          </div>
+        )
+        : (
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4">
+            {filteredIces.map((item) => (
+              <IceCard key={item.name} item={item} onOpen={setSelected} />
+            ))}
+          </div>
+        )}
 
       {/* Modal de detalle */}
-      {selected && <IceModal ice={selected} onClose={() => setSelected(null)} />}
+      {selected && <IceModal
+        ice={selected}
+        onClose={() => setSelected(null)}
+      />}
     </>
   );
 }

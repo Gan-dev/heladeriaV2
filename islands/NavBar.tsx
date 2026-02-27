@@ -61,9 +61,7 @@ export default function NavBar() {
   return (
     <header
       class={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur shadow-md"
-          : "bg-white/80 backdrop-blur"
+        scrolled ? "nav-blur shadow-md" : "nav-blur-light"
       }`}
     >
       <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
