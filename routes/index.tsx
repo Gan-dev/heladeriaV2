@@ -14,12 +14,10 @@ export const handler: Handlers = {
 export default function Home(props: PageProps) {
   const { data } = props;
   const { ices } = data;
-  return (<h1>Heladeria roma</h1>)
-
   return (
     <>
       <Head>
-      <title>Heladeria Roma</title>
+        <title>Heladeria Roma</title>
         <link rel="stylesheet" href="/dist/css/main.css" />
         <link rel="stylesheet" href="/dist/css/components.css" />
       </Head>
@@ -64,9 +62,7 @@ export default function Home(props: PageProps) {
         </div>
 
         <div>
-         
-         
-         <div class="precios mb-3">
+          <div class="precios mb-3">
             {ices.precios.map((item) => (
               <div class="contenedor-precios">
                 <h3>{item.title}</h3>
@@ -79,7 +75,7 @@ export default function Home(props: PageProps) {
             ))}
           </div>
           <FilterIce start={ices.ices} />
-                <Copas/>
+          <Copas />
         </div>
         <Footer />
       </main>
