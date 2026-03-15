@@ -17,7 +17,7 @@
     },
     {
       "name": "Copa Helado Nata Nueces",
-      "price": "6€",
+      "price": "7€",
       "img": "dist/img/copas/copadeHeladoNataNueces.png"
     },
     {
@@ -59,8 +59,8 @@
     {
       "title": "Horchata",
       "items": [
-        { "name": "Horchata", "price": "5€" },
-        { "name": "Horchata Merengada", "price": "7€" }
+        { "name": "Horchata", "price": "5,50€" },
+        { "name": "Horchata Grande", "price": "7€" }
       ]
     },
     {
