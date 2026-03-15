@@ -9,7 +9,7 @@ function MenuCard(
   props: {
     name: string;
     img: string;
-    price: string;
+    price?: string;
     folder: string;
     desc?: string;
   },
@@ -29,7 +29,7 @@ function MenuCard(
       <div class="w-full px-3 py-3 text-center border-t border-gray-100">
         <p class="font-semibold text-gray-800 text-sm leading-tight">{name}</p>
         {desc && <p class="text-xs text-gray-400 mt-0.5">{desc}</p>}
-        <p class="mt-1 font-bold text-gray-900 text-base">{price}</p>
+        {price && <p class="mt-1 font-bold text-gray-900 text-base">{price}</p>}
       </div>
     </article>
   );
@@ -44,17 +44,19 @@ export function Copas({ granizados = [], tarrinas = [] }: CopasProps) {
             key={item.name}
             name={item.name}
             img={item.img}
-            price={item.price}
             folder="hail"
           />
         ))}
       </div>
 
-      <div class="mt-10">
-        <div class="text-center mb-6">
-          <h3 class="text-2xl font-bold">Para Llevar</h3>
-          <p class="text-gray-500 text-sm mt-1">Hasta 3 sabores a elegir</p>
-          <div class="w-12 h-0.5 bg-gray-800 rounded mx-auto mt-3" />
+      <div class="mt-12">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="flex-1 h-px bg-gray-300" />
+          <div class="text-center px-2">
+            <p class="text-xs uppercase tracking-widest text-gray-400 mb-0.5">Hasta 3 sabores</p>
+            <h3 class="text-xl font-bold tracking-wide">Para Llevar</h3>
+          </div>
+          <div class="flex-1 h-px bg-gray-300" />
         </div>
         <div class="grid grid-cols-2 gap-6 max-w-md mx-auto">
           {tarrinas.map((item) => (

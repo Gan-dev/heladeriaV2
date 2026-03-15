@@ -1,7 +1,7 @@
 export interface Copa {
   name: string;
   price: string;
-  img: string;
+  img?: string;
 }
 
 export interface PrecioItem {
@@ -39,6 +39,7 @@ export interface Tarrina {
 
 export interface HeladosData {
   copas: Copa[];
+  granizadoPrecios: PrecioGrupo[];
   precios: PrecioGrupo[];
   ices: IceItem[];
   granizados: Granizado[];

@@ -34,6 +34,40 @@
       "name": "Copa Blanco y Negro",
       "price": "7.50€",
       "img": "dist/img/copas/blancoNegro.png"
+    },
+    {
+      "name": "Banana Split",
+      "price": "13,50€"
+    }
+  ],
+  "granizadoPrecios": [
+    {
+      "title": "Granizados",
+      "items": [
+        { "name": "Pequeño", "price": "2,50€" },
+        { "name": "Mediano", "price": "3,80€" },
+        { "name": "Grande", "price": "4,80€" }
+      ]
+    },
+    {
+      "title": "Batidos",
+      "items": [
+        { "name": "Batido", "price": "6€" },
+        { "name": "Batido Mediano", "price": "7€" }
+      ]
+    },
+    {
+      "title": "Horchata",
+      "items": [
+        { "name": "Horchata", "price": "5€" },
+        { "name": "Horchata Merengada", "price": "7€" }
+      ]
+    },
+    {
+      "title": "Bebidas",
+      "items": [
+        { "name": "Botella de Agua", "price": "1,50€" }
+      ]
     }
   ],
   "precios": [
