@@ -53,7 +53,9 @@ export function Copas({ granizados = [], tarrinas = [] }: CopasProps) {
         <div class="flex items-center gap-4 mb-8">
           <div class="flex-1 h-px bg-gray-300" />
           <div class="text-center px-2">
-            <p class="text-xs uppercase tracking-widest text-gray-400 mb-0.5">Hasta 3 sabores</p>
+            <p class="text-xs uppercase tracking-widest text-gray-400 mb-0.5">
+              Hasta 3 sabores
+            </p>
             <h3 class="text-xl font-bold tracking-wide">Para Llevar</h3>
           </div>
           <div class="flex-1 h-px bg-gray-300" />

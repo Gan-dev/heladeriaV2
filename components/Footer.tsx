@@ -152,12 +152,12 @@ export function Footer() {
           <p>
             Desarrollado por{" "}
             <a
-              href="https://gan-dev.es"
+              href="https://gandev.es"
               target="_blank"
               rel="noopener noreferrer"
               class="text-orange-400 hover:text-orange-300 font-medium transition-colors"
             >
-              Gan-Dev
+              GanDev
             </a>
           </p>
         </div>
