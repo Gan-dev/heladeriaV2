@@ -7,12 +7,12 @@
     },
     {
       "name": "Tulipa",
-      "price": "7€",
+      "price": "8€",
       "img": "dist/img/copas/tulipa1.png"
     },
     {
       "name": "Copa Clásica",
-      "price": "6€",
+      "price": "7€",
       "img": "dist/img/copas/copaClasica.png"
     },
     {
@@ -22,17 +22,17 @@
     },
     {
       "name": "Copa Merengada",
-      "price": "6€",
+      "price": "7€",
       "img": "dist/img/copas/copamerengada.png"
     },
     {
       "name": "Copa Negra",
-      "price": "6€",
+      "price": "8€",
       "img": "dist/img/copas/copablanconegro.png"
     },
     {
       "name": "Copa Blanco y Negro",
-      "price": "6.50€",
+      "price": "7.50€",
       "img": "dist/img/copas/blancoNegro.png"
     }
   ],
@@ -42,15 +42,15 @@
       "items": [
         {
           "name": "Grande",
-          "price": "5.50€"
+          "price": "6.50€"
         },
         {
           "name": "Mediana",
-          "price": "4.80€"
+          "price": "5.60€"
         },
         {
           "name": "Pequeña",
-          "price": "3.50€"
+          "price": "4.10€"
         }
       ]
     },
@@ -59,23 +59,23 @@
       "items": [
         {
           "name": "Barquillo Grande",
-          "price": "5.50€"
+          "price": "6.50€"
         },
         {
           "name": "Barquillo Pequeño",
-          "price": "4.80€"
+          "price": "5.60€"
         },
         {
           "name": "Cucurucho Grande",
-          "price": "4.30€"
+          "price": "5.10€"
         },
         {
           "name": "Cucurucho Pequeño",
-          "price": "3.50€"
+          "price": "4.10€"
         },
         {
           "name": "Barquillo Chocolate",
-          "price": "5.50€"
+          "price": "6.00€"
         }
       ]
     }
@@ -542,7 +542,7 @@
     }
   ],
   "granizados": [
-    { "name": "Horchata", "img": "horchataCarta", "price": "4.00€" },
+    { "name": "Horchata", "img": "horchataCarta", "price": "5.00€" },
     { "name": "Café", "img": "granizadoCafe", "price": "3.90€" },
     { "name": "Chicle", "img": "granizadoChicle", "price": "3.90€" },
     { "name": "Cola", "img": "granizadoCola", "price": "3.90€" },
