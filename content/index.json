@@ -116,15 +116,6 @@
   ],
   "ices": [
     {
-      "name": "After Eight",
-      "allergens": true,
-      "frutosSecos": false,
-      "Huevo": false,
-      "Gluten": false,
-      "Lacteos": true,
-      "img": "aftereight"
-    },
-    {
       "name": "Amarena",
       "allergens": true,
       "frutosSecos": false,
@@ -134,31 +125,22 @@
       "img": "amarena"
     },
     {
-      "name": "Arándanos",
-      "allergens": true,
-      "frutosSecos": false,
-      "Huevo": false,
-      "Gluten": false,
-      "Lacteos": true,
-      "img": "arandanos"
-    },
-    {
       "name": "Avellana",
       "allergens": true,
       "frutosSecos": true,
       "Huevo": false,
       "Gluten": false,
       "Lacteos": true,
-      "img": "dulceLeche"
+      "img": "avellana"
     },
     {
-      "name": "Bombón Ferrero",
+      "name": "Banana",
       "allergens": true,
-      "frutosSecos": true,
+      "frutosSecos": false,
       "Huevo": false,
-      "Gluten": true,
+      "Gluten": false,
       "Lacteos": true,
-      "img": "bombomFerrero"
+      "img": "banana"
     },
     {
       "name": "Café",
@@ -170,65 +152,20 @@
       "img": "cafe"
     },
     {
-      "name": "Café Fondant",
-      "allergens": true,
-      "frutosSecos": false,
-      "Huevo": false,
-      "Gluten": true,
-      "Lacteos": true,
-      "img": "cafeFondam"
-    },
-    {
-      "name": "Canela Tropical",
-      "allergens": true,
-      "frutosSecos": false,
-      "Huevo": false,
-      "Gluten": false,
-      "Lacteos": true,
-      "img": "canelaTropical"
-    },
-    {
-      "name": "Cereza",
-      "allergens": true,
-      "frutosSecos": false,
-      "Huevo": false,
-      "Gluten": false,
-      "Lacteos": true,
-      "img": "cereza"
-    },
-    {
-      "name": "Cielo de Moratalaz",
-      "allergens": true,
-      "frutosSecos": false,
-      "Huevo": false,
-      "Gluten": false,
-      "Lacteos": true,
-      "img": "cieloMoratalaz"
-    },
-    {
-      "name": "Coco",
-      "allergens": true,
-      "frutosSecos": false,
-      "Huevo": false,
-      "Gluten": false,
-      "Lacteos": true,
-      "img": "limon"
-    },
-    {
-      "name": "Conguitos",
+      "name": "Carrot Cake",
       "allergens": true,
       "frutosSecos": true,
-      "Huevo": false,
-      "Gluten": false,
+      "Huevo": true,
+      "Gluten": true,
       "Lacteos": true,
-      "img": "conguitos"
+      "img": "carrotCake"
     },
     {
       "name": "Cheese Cake",
       "allergens": true,
       "frutosSecos": false,
       "Huevo": false,
-      "Gluten": false,
+      "Gluten": true,
       "Lacteos": true,
       "img": "cheesecake"
     },
@@ -251,13 +188,13 @@
       "img": "helado1"
     },
     {
-      "name": "Chocolate con Naranja",
+      "name": "Chocolate Blanco",
       "allergens": true,
       "frutosSecos": false,
       "Huevo": false,
       "Gluten": false,
       "Lacteos": true,
-      "img": "trufa"
+      "img": "chocolateBlanco"
     },
     {
       "name": "Chocolate Roma",
@@ -269,13 +206,22 @@
       "img": "chocoroma"
     },
     {
-      "name": "Chocolate Blanco",
+      "name": "Cielo de Moratalaz",
       "allergens": true,
       "frutosSecos": false,
       "Huevo": false,
       "Gluten": false,
       "Lacteos": true,
-      "img": "chocolateBlanco"
+      "img": "cieloMoratalaz"
+    },
+    {
+      "name": "Coco",
+      "allergens": true,
+      "frutosSecos": false,
+      "Huevo": false,
+      "Gluten": false,
+      "Lacteos": true,
+      "img": "coco"
     },
     {
       "name": "Dulce de Leche",
@@ -296,13 +242,13 @@
       "img": "dulceNevado"
     },
     {
-      "name": "Dulce de Leche con Cookies",
+      "name": "Ferrero Rocher",
       "allergens": true,
-      "frutosSecos": false,
+      "frutosSecos": true,
       "Huevo": false,
       "Gluten": true,
       "Lacteos": true,
-      "img": "dulceCookies"
+      "img": "ferreroRocher"
     },
     {
       "name": "Fresa",
@@ -315,57 +261,30 @@
     },
     {
       "name": "Frutos del Bosque",
-      "allergens": false,
+      "allergens": true,
       "frutosSecos": false,
       "Huevo": false,
       "Gluten": false,
-      "Lacteos": false,
+      "Lacteos": true,
       "img": "frutosBosque"
     },
     {
-      "name": "Flan de Dulce de Leche",
-      "allergens": true,
-      "frutosSecos": false,
-      "Huevo": false,
-      "Gluten": false,
-      "Lacteos": true,
-      "img": "flanDulceLeche"
-    },
-    {
-      "name": "Frambuesa",
-      "allergens": false,
-      "frutosSecos": false,
-      "Huevo": false,
-      "Gluten": false,
-      "Lacteos": false,
-      "img": "frambuesa"
-    },
-    {
-      "name": "Galleta María",
-      "allergens": true,
-      "frutosSecos": false,
-      "Huevo": false,
-      "Gluten": true,
-      "Lacteos": true,
-      "img": "galletaMaria"
-    },
-    {
-      "name": "Gominolas",
-      "allergens": true,
-      "frutosSecos": false,
-      "Huevo": false,
-      "Gluten": false,
-      "Lacteos": true,
-      "img": "gominolas"
-    },
-    {
-      "name": "Happy Hippo",
+      "name": "Huevo Kinder",
       "allergens": true,
       "frutosSecos": true,
       "Huevo": false,
       "Gluten": true,
       "Lacteos": true,
-      "img": "happyHippo"
+      "img": "huevoKinder"
+    },
+    {
+      "name": "Huevito Kinder",
+      "allergens": true,
+      "frutosSecos": false,
+      "Huevo": false,
+      "Gluten": false,
+      "Lacteos": true,
+      "img": "huevoKinder"
     },
     {
       "name": "Leche Merengada",
@@ -377,6 +296,15 @@
       "img": "lecheMerengada"
     },
     {
+      "name": "Lemon Pie",
+      "allergens": true,
+      "frutosSecos": true,
+      "Huevo": true,
+      "Gluten": true,
+      "Lacteos": true,
+      "img": "lemonPie"
+    },
+    {
       "name": "Limón",
       "allergens": false,
       "frutosSecos": false,
@@ -384,6 +312,15 @@
       "Gluten": false,
       "Lacteos": false,
       "img": "limon"
+    },
+    {
+      "name": "Lotus",
+      "allergens": true,
+      "frutosSecos": false,
+      "Huevo": false,
+      "Gluten": true,
+      "Lacteos": true,
+      "img": "lotus"
     },
     {
       "name": "Mango",
@@ -395,22 +332,49 @@
       "img": "mango"
     },
     {
-      "name": "Melón",
-      "allergens": true,
-      "frutosSecos": false,
-      "Huevo": false,
-      "Gluten": false,
-      "Lacteos": true,
-      "img": "melon"
-    },
-    {
-      "name": "Mojito",
+      "name": "Manzana",
       "allergens": false,
       "frutosSecos": false,
       "Huevo": false,
       "Gluten": false,
       "Lacteos": false,
-      "img": "mojito"
+      "img": "manzana"
+    },
+    {
+      "name": "Maracuyá",
+      "allergens": true,
+      "frutosSecos": false,
+      "Huevo": false,
+      "Gluten": false,
+      "Lacteos": true,
+      "img": "maracuya"
+    },
+    {
+      "name": "Mascarpone",
+      "allergens": true,
+      "frutosSecos": false,
+      "Huevo": false,
+      "Gluten": true,
+      "Lacteos": true,
+      "img": "mascarpone"
+    },
+    {
+      "name": "Menta",
+      "allergens": true,
+      "frutosSecos": false,
+      "Huevo": false,
+      "Gluten": false,
+      "Lacteos": true,
+      "img": "menta"
+    },
+    {
+      "name": "Muerte por Chocolate",
+      "allergens": true,
+      "frutosSecos": false,
+      "Huevo": true,
+      "Gluten": true,
+      "Lacteos": true,
+      "img": "muerteChocolate"
     },
     {
       "name": "Nata",
@@ -419,25 +383,16 @@
       "Huevo": false,
       "Gluten": false,
       "Lacteos": true,
-      "img": "limon"
+      "img": "nata"
     },
     {
-      "name": "Nata con Nueces",
+      "name": "Nutella",
       "allergens": true,
       "frutosSecos": true,
       "Huevo": false,
       "Gluten": false,
       "Lacteos": true,
-      "img": "nataNueces"
-    },
-    {
-      "name": "Nuevo Kinder",
-      "allergens": true,
-      "frutosSecos": true,
-      "Huevo": false,
-      "Gluten": true,
-      "Lacteos": true,
-      "img": "nuevoKinder"
+      "img": "nutella"
     },
     {
       "name": "Oreo",
@@ -449,6 +404,15 @@
       "img": "oreo"
     },
     {
+      "name": "Pantera Rosa",
+      "allergens": true,
+      "frutosSecos": false,
+      "Huevo": false,
+      "Gluten": true,
+      "Lacteos": true,
+      "img": "panteraRosa"
+    },
+    {
       "name": "Pistacho",
       "allergens": true,
       "frutosSecos": true,
@@ -458,13 +422,31 @@
       "img": "pistacho"
     },
     {
-      "name": "Plátano Nevado",
+      "name": "Queso Mango",
       "allergens": true,
       "frutosSecos": false,
       "Huevo": false,
       "Gluten": false,
       "Lacteos": true,
-      "img": "platanoNevado"
+      "img": "quesoMango"
+    },
+    {
+      "name": "Queso Maracuyá",
+      "allergens": true,
+      "frutosSecos": false,
+      "Huevo": false,
+      "Gluten": false,
+      "Lacteos": true,
+      "img": "quesoMaracuya"
+    },
+    {
+      "name": "Red Velvet",
+      "allergens": true,
+      "frutosSecos": false,
+      "Huevo": true,
+      "Gluten": true,
+      "Lacteos": true,
+      "img": "redVelvet"
     },
     {
       "name": "Ron Pasas",
@@ -476,22 +458,13 @@
       "img": "ronPasas"
     },
     {
-      "name": "Super Sambayón",
-      "allergens": true,
-      "frutosSecos": false,
-      "Huevo": true,
-      "Gluten": false,
-      "Lacteos": true,
-      "img": "superSambayon"
-    },
-    {
       "name": "Stracciatella",
       "allergens": true,
       "frutosSecos": false,
       "Huevo": false,
       "Gluten": false,
       "Lacteos": true,
-      "img": "platanoNevado"
+      "img": "stracciatella"
     },
     {
       "name": "Tiramisú",
@@ -503,24 +476,6 @@
       "img": "tiramisu"
     },
     {
-      "name": "Torronchino",
-      "allergens": true,
-      "frutosSecos": true,
-      "Huevo": false,
-      "Gluten": true,
-      "Lacteos": true,
-      "img": "torroncito"
-    },
-    {
-      "name": "Turrón",
-      "allergens": true,
-      "frutosSecos": true,
-      "Huevo": true,
-      "Gluten": false,
-      "Lacteos": true,
-      "img": "turron"
-    },
-    {
       "name": "Tutti Frutti",
       "allergens": true,
       "frutosSecos": false,
@@ -530,13 +485,13 @@
       "img": "tutifruti"
     },
     {
-      "name": "Trufa",
+      "name": "Turrón",
       "allergens": true,
       "frutosSecos": true,
       "Huevo": false,
       "Gluten": false,
       "Lacteos": true,
-      "img": "trufa"
+      "img": "turron"
     },
     {
       "name": "Vainilla",
@@ -563,16 +518,7 @@
       "Huevo": false,
       "Gluten": false,
       "Lacteos": true,
-      "img": "limon"
-    },
-    {
-      "name": "Zanahoria y Mandarina",
-      "allergens": false,
-      "frutosSecos": false,
-      "Huevo": false,
-      "Gluten": false,
-      "Lacteos": false,
-      "img": "zanahoriaMandarina"
+      "img": "yogur"
     }
   ],
   "granizados": [
@@ -606,13 +552,13 @@
     {
       "name": "Tarrina ½ Litro",
       "img": "medioLitro",
-      "price": "8.70€",
+      "price": "10.50€",
       "desc": "Hasta 3 sabores"
     },
     {
       "name": "Tarrina 1 Litro",
       "img": "unLitro",
-      "price": "17.50€",
+      "price": "20.00€",
       "desc": "Hasta 3 sabores"
     }
   ]

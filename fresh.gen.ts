@@ -3,18 +3,26 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_name_ from "./routes/[name].tsx";
+import * as $_app from "./routes/_app.tsx";
+import * as $aviso_legal from "./routes/aviso-legal.tsx";
 import * as $carta_index from "./routes/carta/index.tsx";
 import * as $index from "./routes/index.tsx";
+import * as $politica_cookies from "./routes/politica-cookies.tsx";
+import * as $politica_privacidad from "./routes/politica-privacidad.tsx";
 import * as $Counter from "./islands/Counter.tsx";
 import * as $FilterIce from "./islands/FilterIce.tsx";
 import * as $NavBar from "./islands/NavBar.tsx";
-import { type Manifest } from "$fresh/server.ts";
+import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
     "./routes/[name].tsx": $_name_,
+    "./routes/_app.tsx": $_app,
+    "./routes/aviso-legal.tsx": $aviso_legal,
     "./routes/carta/index.tsx": $carta_index,
     "./routes/index.tsx": $index,
+    "./routes/politica-cookies.tsx": $politica_cookies,
+    "./routes/politica-privacidad.tsx": $politica_privacidad,
   },
   islands: {
     "./islands/Counter.tsx": $Counter,
