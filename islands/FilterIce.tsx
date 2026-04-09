@@ -93,7 +93,7 @@ function IceModal({ ice, onClose }: { ice: Ice; onClose: () => void }) {
 
         <div class="bg-gray-50 flex items-center justify-center h-52">
           <img
-            src={"./dist/img/icecream/" + ice.img + ".png"}
+            src={"./dist/img/icecream/" + ice.img + ".webp"}
             alt={ice.name}
             class="max-h-44 object-contain"
           />
@@ -167,12 +167,12 @@ function IceCard({ item, onOpen }: { item: Ice; onOpen: (i: Ice) => void }) {
       }}
       aria-label={"Ver detalle de " + item.name}
     >
-      <div class="w-full bg-gray-50 flex items-center justify-center p-3 h-36 sm:h-44">
+      <div class="w-full bg-gray-50 flex items-center justify-center h-64 sm:h-36">
         <img
-          src={"./dist/img/icecream/" + item.img + ".png"}
+          src={"./dist/img/icecream/" + item.img + ".webp"}
           loading="lazy"
           alt={item.name}
-          class="max-h-28 sm:max-h-36 object-contain group-hover:scale-105 transition-transform duration-300"
+          class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
         />
       </div>
       <div class="w-full px-2 pt-2 pb-2 text-center border-t border-gray-100 flex-1 flex flex-col justify-between gap-1">
@@ -347,10 +347,12 @@ export default function FilterIce(props: IcesProps) {
         )}
 
       {/* Modal de detalle */}
-      {selected && <IceModal
-        ice={selected}
-        onClose={() => setSelected(null)}
-      />}
+      {selected && (
+        <IceModal
+          ice={selected}
+          onClose={() => setSelected(null)}
+        />
+      )}
     </>
   );
 }

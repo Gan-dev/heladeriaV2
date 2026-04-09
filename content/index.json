@@ -59,8 +59,8 @@
     {
       "title": "Horchata",
       "items": [
-        { "name": "Horchata", "price": "5,50€" },
-        { "name": "Horchata Grande", "price": "7€" }
+        { "name": "Horchata Pequeña", "price": "5€" },
+        { "name": "Horchata Grande", "price": "5,50€" }
       ]
     },
     {
@@ -185,7 +185,7 @@
       "Huevo": false,
       "Gluten": false,
       "Lacteos": true,
-      "img": "helado1"
+      "img": "chocolate"
     },
     {
       "name": "Chocolate Blanco",
