@@ -32,7 +32,8 @@ export default function AvisoLegal() {
             <li>
               <strong>Denominación social:</strong> Heladería Roma
             </li>
-            <li>
+            {
+              /* <li>
               <strong>NIF/CIF:</strong> [NIF del titular]
             </li>
             <li>
@@ -43,7 +44,8 @@ export default function AvisoLegal() {
             </li>
             <li>
               <strong>Correo electrónico:</strong> [correo@heladeria-roma.es]
-            </li>
+            </li> */
+            }
           </ul>
         </section>
 

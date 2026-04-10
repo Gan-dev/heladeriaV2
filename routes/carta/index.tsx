@@ -71,7 +71,7 @@ export default function Home(props: PageProps<{ ices: HeladosData }>) {
 
       <main class="section-menu-card max-w-4xl mx-auto px-4 sm:px-8 pb-12">
         {/* Quick-nav */}
-        <nav class="flex flex-wrap items-center justify-center gap-1 border-b border-gray-200 py-4 mb-12 text-xs font-bold uppercase tracking-widest text-gray-500">
+        <nav class="flex flex-wrap items-center justify-center gap-1 border-b border-gray-200 py-4 mb-2 text-xs font-bold uppercase tracking-widest text-gray-500">
           <a
             href="#copas"
             class="px-4 py-1 hover:text-gray-900 transition-colors"
@@ -183,6 +183,20 @@ export default function Home(props: PageProps<{ ices: HeladosData }>) {
                 </div>
               ))}
             </div>
+          </div>
+
+          <div class="mt-4 max-w-2xl mx-auto flex items-start gap-3 rounded-xl border border-[#F89E00]/30 bg-[#FFF8EC] px-4 py-3 mb-8">
+            <ul class="text-xs text-gray-700 space-y-0.5">
+              <li>
+                Los helados pueden tener <strong>contaminación cruzada</strong>
+                {" "}
+                con alérgenos.
+              </li>
+              <li>
+                Disponemos de <strong>sabores fuera de carta</strong>{" "}
+                — consúltanos.
+              </li>
+            </ul>
           </div>
 
           <FilterIce start={ices.ices} />

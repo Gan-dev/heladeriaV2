@@ -33,7 +33,8 @@ export default function PoliticaPrivacidad() {
             <li>
               <strong>Identidad:</strong> Heladería Roma
             </li>
-            <li>
+            {
+              /* <li>
               <strong>NIF/CIF:</strong> [NIF del titular]
             </li>
             <li>
@@ -41,7 +42,8 @@ export default function PoliticaPrivacidad() {
             </li>
             <li>
               <strong>Correo de contacto:</strong> [correo@heladeria-roma.es]
-            </li>
+            </li> */
+            }
           </ul>
         </section>
 
@@ -135,8 +137,10 @@ export default function PoliticaPrivacidad() {
           <p class="text-sm leading-relaxed text-gray-600 mb-3">
             Puede ejercer en cualquier momento los siguientes derechos ante el
             Responsable del tratamiento, enviando un escrito a
-            [correo@heladeria-roma.es] junto con copia de su documento de
-            identidad:
+            {
+              /* [correo@heladeria-roma.es] junto con copia de su documento de
+            identidad: */
+            }
           </p>
           <ul class="space-y-1 text-sm text-gray-600 list-disc list-inside">
             <li>Acceso a sus datos personales</li>

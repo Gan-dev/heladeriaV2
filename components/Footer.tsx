@@ -39,9 +39,10 @@ export function Footer() {
                   />
                 </svg>
               </span>
-              Tu ciudad, España
+              Madrid, España
             </p>
-            <p class="flex items-center gap-2">
+            {
+              /* <p class="flex items-center gap-2">
               <span class="text-orange-400">
                 <svg
                   class="w-4 h-4"
@@ -58,7 +59,8 @@ export function Footer() {
                 </svg>
               </span>
               +34 000 000 000
-            </p>
+            </p> */
+            }
           </div>
         </div>
 
