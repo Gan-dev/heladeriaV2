@@ -196,6 +196,9 @@ export default function Home(props: PageProps<{ ices: HeladosData }>) {
                 Disponemos de <strong>sabores fuera de carta</strong>{" "}
                 — consúltanos.
               </li>
+              <li>
+                No disponemos de <strong>servicio de terraza</strong>
+              </li>
             </ul>
           </div>
 
